@@ -3,19 +3,19 @@ import tailwind from '@astrojs/tailwind';
 
 export default defineConfig({
   integrations: [tailwind()],
+  
+  // Configuration du serveur de développement
   server: {
     host: true,
     port: 3000
   },
+
+  // Configuration du serveur de prévisualisation (celui qui tourne sur Coolify)
   vite: {
     preview: {
-      allowedHosts: true,
       host: true,
       port: 3000,
-    },
-    server: {
-      allowedHosts: true,
-      host: true
+      allowedHosts: true, // <--- LA SOLUTION : On autorise TOUT
     }
   }
 });

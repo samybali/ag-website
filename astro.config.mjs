@@ -2,22 +2,11 @@ import { defineConfig } from 'astro/config';
 import tailwind from '@astrojs/tailwind';
 
 export default defineConfig({
-  // 1. On active Tailwind ici
   integrations: [tailwind()],
-
-  // 2. On garde la configuration serveur qui marche
+  // On laisse Astro gérer le démarrage basique, 
+  // mais la sécurité avancée est maintenant gérée par vite.config.js
   server: {
     host: true,
     port: 3000
-  },
-  vite: {
-    preview: {
-      allowedHosts: ['19wires.com', 'www.19wires.com', 'localhost'],
-      host: true,
-      port: 3000,
-    },
-    server: {
-      allowedHosts: ['19wires.com', 'www.19wires.com', 'localhost'],
-    }
   }
 });

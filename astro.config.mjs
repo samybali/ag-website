@@ -1,11 +1,16 @@
-// @ts-check
 import { defineConfig } from 'astro/config';
+import tailwind from '@astrojs/tailwind';
 
-import tailwindcss from '@tailwindcss/vite';
-
-// https://astro.build/config
 export default defineConfig({
+  integrations: [tailwind()],
+  server: {
+    host: true,
+    port: 3000
+  },
+  // La partie magique pour corriger l'erreur :
   vite: {
-    plugins: [tailwindcss()]
+    preview: {
+      allowedHosts: ['19wires.com', 'www.19wires.com']
+    }
   }
 });

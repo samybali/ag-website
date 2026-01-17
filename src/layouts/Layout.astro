@@ -9,23 +9,14 @@ const { title } = Astro.props;
 <!doctype html>
 <html lang="fr" class="scroll-smooth">
 	<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="apple-touch-icon" href="/favicon.svg" />
-    
-    <meta name="theme-color" content="#0f172a" />
-    <title>{title}</title>
-</head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Expertise Backend & Automatisation" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
 	<body class="bg-slate-950 text-white antialiased">
 		<slot />
 	</body>
 </html>
-
-<style is:global>
-	/* On peut ajouter des styles globaux ici si besoin */
-	html {
-		font-family: system-ui, sans-serif;
-	}
-</style>

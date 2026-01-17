@@ -6,8 +6,15 @@ import tailwind from '@astrojs/tailwind';
 export default defineConfig({
   integrations: [tailwind()],
   vite: {
+    server: {
+      host: true, // Écoute sur toutes les adresses (0.0.0.0)
+    },
     preview: {
-      allowedHosts: ['19wires.com', 'www.19wires.com']
-    }
-  }
+      host: true,        // Force l'écoute sur le réseau
+      allowedHosts: true, // ✅ DÉSACTIVE LA SÉCURITÉ DES NOMS DE DOMAINE
+      headers: {
+        "Access-Control-Allow-Origin": "*",
+      },
+    },
+  },
 });

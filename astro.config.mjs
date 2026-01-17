@@ -7,7 +7,7 @@ export default defineConfig({
   integrations: [tailwind()],
   vite: {
     preview: {
-      allowedHosts: true,
-    },
-  },
+      allowedHosts: ['19wires.com', 'www.19wires.com']
+    }
+  }
 });

@@ -1,99 +1,12 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Base from '../layouts/Base.astro';
 ---
-
-<Layout title="19wires | Automatisation & Backend Engineering">
-	<main class="min-h-screen bg-slate-950 text-white selection:bg-blue-500 selection:text-white">
-		
-		<nav class="container mx-auto px-6 py-6 flex justify-between items-center">
-			<a href="/" class="text-2xl font-bold tracking-tighter">
-				19wires<span class="text-blue-500">.</span>
-			</a>
-			<a href="mailto:contact@19wires.com" class="hidden md:inline-block px-4 py-2 text-sm font-medium text-slate-300 hover:text-white transition-colors">
-				Me contacter
-			</a>
-		</nav>
-
-		<section class="container mx-auto px-6 py-20 md:py-32 max-w-5xl">
-			<div class="space-y-6">
-				<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-blue-500/30 bg-blue-500/10 text-blue-400 text-xs font-semibold tracking-wide uppercase">
-					<span class="relative flex h-2 w-2">
-					  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
-					  <span class="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
-					</span>
-					Disponible pour mission immédiate
-				</div>
-
-				<h1 class="text-5xl md:text-7xl font-bold tracking-tight leading-tight">
-					Votre infrastructure, <br/>
-					<span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">
-						Câblée pour la performance.
-					</span>
-				</h1>
-
-				<p class="text-lg md:text-xl text-slate-400 max-w-2xl leading-relaxed">
-					Audit, Automatisation et Backend. Je structure votre technique pour qu'elle supporte votre croissance sans faillir, du serveur au script.
-				</p>
-
-				<div class="flex flex-wrap gap-4 pt-4">
-					<a href="mailto:contact@19wires.com" class="px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white font-semibold rounded-lg transition-all shadow-lg shadow-blue-900/20">
-						Discuter de votre projet
-					</a>
-					<a href="#expertises" class="px-8 py-4 bg-slate-800 hover:bg-slate-700 text-white font-medium rounded-lg transition-all border border-slate-700">
-						Voir mes expertises
-					</a>
-				</div>
-			</div>
-		</section>
-
-		<section id="expertises" class="container mx-auto px-6 py-20 border-t border-slate-900">
-			<h2 class="text-3xl font-bold mb-12">Interventions techniques</h2>
-			
-			<div class="grid md:grid-cols-3 gap-8">
-				
-				<div class="p-8 rounded-2xl bg-slate-900/50 border border-slate-800 hover:border-blue-500/50 transition-colors group">
-					<div class="h-12 w-12 bg-blue-500/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-blue-500/20 transition-colors">
-						<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-						</svg>
-					</div>
-					<h3 class="text-xl font-bold mb-3 text-white">Automatisation Métier</h3>
-					<p class="text-slate-400 leading-relaxed">
-						Connectez vos outils (CRM, ERP, API). Je crée des scripts Python/Node.js qui tournent 24h/24 pour traiter vos données sans intervention humaine.
-					</p>
-				</div>
-
-				<div class="p-8 rounded-2xl bg-slate-900/50 border border-slate-800 hover:border-emerald-500/50 transition-colors group">
-					<div class="h-12 w-12 bg-emerald-500/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-emerald-500/20 transition-colors">
-						<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
-						</svg>
-					</div>
-					<h3 class="text-xl font-bold mb-3 text-white">Architecture & Cloud</h3>
-					<p class="text-slate-400 leading-relaxed">
-						Vos coûts serveurs explosent ? Je migre et optimise votre infrastructure sur du VPS Linux / Docker haute performance.
-					</p>
-				</div>
-
-				<div class="p-8 rounded-2xl bg-slate-900/50 border border-slate-800 hover:border-purple-500/50 transition-colors group">
-					<div class="h-12 w-12 bg-purple-500/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-purple-500/20 transition-colors">
-						<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" />
-						</svg>
-					</div>
-					<h3 class="text-xl font-bold mb-3 text-white">Refonte Backend</h3>
-					<p class="text-slate-400 leading-relaxed">
-						Nettoyage de dette technique. Réécriture d'API lentes. Sécurisation de bases de données. Je rends votre technique robuste.
-					</p>
-				</div>
-
-			</div>
-		</section>
-
-		<footer class="py-12 text-center text-slate-600 text-sm">
-			<p>Propulsé par Astro & Docker sur Infrastructure Privée.</p>
-			<p class="mt-2">&copy; {new Date().getFullYear()} 19wires. Tous droits réservés.</p>
-		</footer>
-
-	</main>
-</Layout>
+<Base title="19wires">
+  <div class="h-screen flex flex-col items-center justify-center text-center p-4">
+    <h1 class="text-6xl font-bold mb-4">19wires<span class="text-blue-500">.</span></h1>
+    <p class="text-xl text-slate-400">Infrastructure & Automatisation</p>
+    <div class="mt-8 px-4 py-2 bg-green-500/10 text-green-400 border border-green-500/20 rounded-full">
+      Site Opérationnel ✅
+    </div>
+  </div>
+</Base>

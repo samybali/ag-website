@@ -7,10 +7,15 @@ export default defineConfig({
     host: true,
     port: 3000
   },
-  // La partie magique pour corriger l'erreur :
   vite: {
     preview: {
-      allowedHosts: ['19wires.com', 'www.19wires.com']
+      allowedHosts: true,
+      host: true,
+      port: 3000,
+    },
+    server: {
+      allowedHosts: true,
+      host: true
     }
   }
 });
